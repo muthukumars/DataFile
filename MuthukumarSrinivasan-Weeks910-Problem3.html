@@ -1,0 +1,34 @@
+<html>
+<title>This is Muthkumar-Module5-Week9-10-IS-608</title>
+
+<SCRIPT Language="Javascript">
+
+function LoadPresidentData(){
+	alert("load")
+
+   	var allText =[];
+   	var allTextLines = [];
+   	var Lines = [];
+
+   	var txtFile = new XMLHttpRequest();
+	txtFile.onload = reqListener;
+
+   	txtFile.open("GET",'https://raw.githubusercontent.com/muthukumars/DataFile/master/presidents.txt', true);
+	txtFile.send()
+   	allText = txtFile.responseText;
+	alert(allText)
+}
+</SCRIPT>
+
+<body>
+
+<h1> THIS IS MUTHUKUMAR'S PAGE</h1>
+
+<form name="reversefunctionButton">
+  <input type="Button" value="Click To Load President Data" onClick=' LoadPresidentData()'>
+</form>
+
+
+</body>
+<html>
+
